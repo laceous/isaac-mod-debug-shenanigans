@@ -36,6 +36,7 @@ if REPENTOGON then
     ImGui.AddTab('shenanigansTabBarDebug', 'shenanigansTabGameState', 'Game State')
     ImGui.AddTab('shenanigansTabBarDebug', 'shenanigansTabLevelState', 'Level State')
     ImGui.AddTab('shenanigansTabBarDebug', 'shenanigansTabRoomState', 'Room State')
+    ImGui.AddTab('shenanigansTabBarDebug', 'shenanigansTabWindowState', 'Window State')
     
     local debugs = {
       { id = DebugFlag.ENTITY_POSITIONS     , text = 'Entity Positions' },
@@ -149,6 +150,15 @@ if REPENTOGON then
         end
       end
     end
+    
+    local txtWindowTitleId = 'shenanigansTxtWindowTitle'
+    ImGui.AddInputText('shenanigansTabWindowState', txtWindowTitleId, 'Window Title', nil, '', '')
+    ImGui.AddCallback(txtWindowTitleId, ImGuiCallback.Render, function()
+      ImGui.UpdateData(txtWindowTitleId, ImGuiData.Value, Isaac.GetWindowTitle())
+    end)
+    ImGui.AddCallback(txtWindowTitleId, ImGuiCallback.Edited, function(s)
+      Isaac.SetWindowTitle(s)
+    end)
   end
   
   -- launch options allow you to skip the menu

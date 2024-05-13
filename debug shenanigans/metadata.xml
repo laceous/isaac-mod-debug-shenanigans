@@ -14,8 +14,10 @@ More info:
     [*][url=https://wofsauge.github.io/IsaacDocs/rep/enums/GameStateFlag.html]Game state[/url]
     [*][url=https://wofsauge.github.io/IsaacDocs/rep/enums/LevelStateFlag.html]Level state[/url]
     [*][url=https://wofsauge.github.io/IsaacDocs/rep/enums/RoomDescriptor.html]Room state[/url]
-[/list]</description>
-    <version>1.1</version>
+[/list]
+
+Update: You can now add a message to the window title.</description>
+    <version>1.2</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Rooms"/>
