@@ -59,6 +59,8 @@ if REPENTOGON then
     for i = 0, GameStateFlag.NUM_STATE_FLAGS - 1 do
       if i == GameStateFlag.STATE_FAMINE_SPAWNED then
         table.insert(gameStates, { id = i, textLast = 'Angel Room Spawned' })
+      elseif i == GameStateFlag.STATE_BOSSPOOL_SWITCHED then
+        table.insert(gameStates, { id = i, textLast = 'True Co-op Disabled' })
       else
         table.insert(gameStates, { id = i })
       end
