@@ -17,7 +17,7 @@ More info:
 [/list]
 
 Update: You can now add a message to the window title.</description>
-    <version>1.3</version>
+    <version>1.4</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Rooms"/>
